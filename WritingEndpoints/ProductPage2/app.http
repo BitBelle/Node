@@ -1,0 +1,78 @@
+GET http://localhost:4000/Category
+
+####
+POST http://localhost:4000/Category
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJlZmMxOTE3OC0xYTIzLTRjOWQtYTQyNS00Mjk4M2U1YjFhYzciLCJ1c2VyX05hbWUiOiJEb3VnbGFzIiwiaWF0IjoxNzE4MjcwNzU0LCJleHAiOjE3MTgyNzc5NTR9._JsSEoYUiX1kF3fSR9q8Z1UkI_oWyDQbq4DxjuGKU2c
+Content-Type: application/json
+
+{
+    "category_Name": "DECAFs",
+    "category_Description": "Pants"
+}
+
+
+####
+GET http://localhost:4000/Product
+
+####
+
+POST http://localhost:4000/Product
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJlZmMxOTE3OC0xYTIzLTRjOWQtYTQyNS00Mjk4M2U1YjFhYzciLCJ1c2VyX05hbWUiOiJEb3VnbGFzIiwiaWF0IjoxNzE4MjcwNzU0LCJleHAiOjE3MTgyNzc5NTR9._JsSEoYUiX1kF3fSR9q8Z1UkI_oWyDQbq4DxjuGKU2c
+Content-Type: application/json
+
+{
+    "product_Name": "Jeans",
+    "product_Description": "BlueJeans",
+    "product_Price": 1000,
+    "category_Id": "6681072b-65d8-4b6a-aaa6-7f6bd0628654"
+}
+
+
+
+####
+GET http://localhost:4000/Products/001
+
+####
+PATCH  http://localhost:4000/Products
+Content-Type: application/json
+
+{
+    "product_Name": "Pants",
+    "product_Description": "Blue Jeans",
+    "product_Price": 1500,
+    "category_Id": 1
+}
+
+####
+PATCH  http://localhost:4000/products/1
+
+
+#### User-Auth Part
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+    "user_Name": "Pato Patrick",
+    "user_Email": "pp@gmail.com",
+    "password_Hash": "Qwerty"
+
+}
+
+####
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+    "user_Email": "ddd@gmail.com",
+    "password_Hash": "Qwerty@12345"
+
+}
+
+####
+GET http://localhost:4000/auth/login
+//token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiIzN2Y2YjM3NC0zMWEzLTQzMmUtYjRmNy0zZTcxNWUwYTcyZTEiLCJ1c2VyX05hbWUiOiJKb2huIEpvaG4iLCJpYXQiOjE3MTgyNDYwMDksImV4cCI6MTcxODI1MzIwOX0.cKHaM0V-wvrhXEqwrc4Lmq8-eJqwqfbkt4VnoumIsDA
+
+
+####
+GET http://localhost:4000/auth
+//token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiIzN2Y2YjM3NC0zMWEzLTQzMmUtYjRmNy0zZTcxNWUwYTcyZTEiLCJ1c2VyX05hbWUiOiJKb2huIEpvaG4iLCJpYXQiOjE3MTgyNDYwMDksImV4cCI6MTcxODI1MzIwOX0.cKHaM0V-wvrhXEqwrc4Lmq8-eJqwqfbkt4VnoumIsDA
