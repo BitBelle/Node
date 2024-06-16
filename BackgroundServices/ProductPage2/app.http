@@ -1,0 +1,74 @@
+#### Adding Category
+POST http://localhost:4000/Category
+# token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI2YzYxNTVmMi01ZDE4LTQ5NDQtOWViNC0yODQ2NDRjYTkzZjciLCJ1c2VyX05hbWUiOiJNZXJjeSBOamVyaSIsImlhdCI6MTcxODQ4NDI3MywiZXhwIjoxNzE4NTEzMDczfQ.sPhAST7zx1ey2diZBOr9Kz7j2LV0nuOz3_pcei9rJIc
+Content-Type: application/json
+
+{
+    "category_Name": "DECAFs",
+    "category_Description": "Pants"
+}
+
+
+#####
+GET http://localhost:4000/Category
+
+
+
+
+#### Add a Product
+POST http://localhost:4000/Product
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJlZmMxOTE3OC0xYTIzLTRjOWQtYTQyNS00Mjk4M2U1YjFhYzciLCJ1c2VyX05hbWUiOiJEb3VnbGFzIiwiaWF0IjoxNzE4MjcwNzU0LCJleHAiOjE3MTgyNzc5NTR9._JsSEoYUiX1kF3fSR9q8Z1UkI_oWyDQbq4DxjuGKU2c
+Content-Type: application/json
+
+{
+    "product_Name": "Shirts",
+    "product_Description": "Polo-Shirt",
+    "product_Price": 1000,
+    "category_Id": "6681072b-65d8-4b6a-aaa6-7f6bd0628654"
+}
+
+
+#### Get All Products
+GET http://localhost:4000/Product
+
+
+
+#### Get Product by ID
+GET http://localhost:4000/Product/1336c31e-b2fd-4897-b1db-cff8234a0adf
+
+
+
+####
+PATCH  http://localhost:4000/Product
+# token:
+Content-Type: application/json
+
+{
+    "product_Name": "Pants",
+    "product_Description": "Blue Jeans",
+    "product_Price": 1500,
+    "category_Id": 1
+}
+
+
+#### User-Auth Part
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+    "user_Name": "Mercy Njeri",
+    "user_Email": "mercy01@gmail.com",
+    "password_Hash": "Qwerty@123"
+
+}
+
+####
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+    "user_Email": "mercy01@gmail.com",
+    "password_Hash": "Qwerty@123"
+
+}
+
